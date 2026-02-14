@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "DivineOmega\\LaravelRouteRestrictor\\": "src/"
+      "JordJD\\LaravelRouteRestrictor\\": "src/"
     }
   },
   "config": {
@@ -24,12 +24,13 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "3.0-dev"
+      "dev-master": "4.0-dev"
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "replace": {
     "divineomega/laravel-route-restrictor": "self.version"
-  }
+  },
+  "require-dev": {}
 }

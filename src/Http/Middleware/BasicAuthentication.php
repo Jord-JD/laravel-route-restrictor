@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\LaravelRouteRestrictor\Http\Middleware;
+namespace JordJD\LaravelRouteRestrictor\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

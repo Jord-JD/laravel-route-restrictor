@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\LaravelRouteRestrictor\Providers;
+namespace JordJD\LaravelRouteRestrictor\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

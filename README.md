@@ -5,10 +5,10 @@ Laravel Route Restrictor is a middleware package designed to restrict a entire s
 ## Setup
 
 1. Run `composer require jord-jd/laravel-route-restrictor`.
-2. Add `DivineOmega\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider::class` to the `$providers` array in your `config/app.php` file.
-3. Run `php artisan vendor:publish --provider="DivineOmega\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider"`.
-4. Add `\DivineOmega\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$middleware` array in your `app/Http/Kernel.php` file.
-5. Add `'routeRestrictor' => \DivineOmega\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$routeMiddleware` array in your `app/Http/Kernel.php` file.
+2. Add `JordJD\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider::class` to the `$providers` array in your `config/app.php` file.
+3. Run `php artisan vendor:publish --provider="JordJD\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider"`.
+4. Add `\JordJD\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$middleware` array in your `app/Http/Kernel.php` file.
+5. Add `'routeRestrictor' => \JordJD\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$routeMiddleware` array in your `app/Http/Kernel.php` file.
 6. Add `RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]` immediately below `RewriteEngine On` in your `public/.htaccess` file. This is required for web servers that are configured to use CGI as their PHP handler.
 
 ## Global restriction
