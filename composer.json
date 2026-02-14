@@ -1,26 +1,35 @@
 {
-    "name": "divineomega/laravel-route-restrictor",
-    "description": "Laravel middleware to restrict a site or specific routes using HTTP basic authentication",
-    "keywords": ["password", "restriction", "password restriction", "laravel", "basic authentication"],
-    "homepage": "https://github.com/DivineOmega/laravel-route-restrictor",
-    "license": "LGPL-3.0-only",
-    "require": {
-        "php": ">=5.5.9",
-        "laravel/framework": "^5.1|^6.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "DivineOmega\\LaravelRouteRestrictor\\": "src/"
-        }
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "jord-jd/laravel-route-restrictor",
+  "description": "Laravel middleware to restrict a site or specific routes using HTTP basic authentication",
+  "keywords": [
+    "password",
+    "restriction",
+    "password restriction",
+    "laravel",
+    "basic authentication"
+  ],
+  "homepage": "https://github.com/Jord-JD/laravel-route-restrictor",
+  "license": "LGPL-3.0-only",
+  "require": {
+    "php": ">=5.5.9",
+    "laravel/framework": "^5.1|^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DivineOmega\\LaravelRouteRestrictor\\": "src/"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.0-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "replace": {
+    "divineomega/laravel-route-restrictor": "self.version"
+  }
 }

@@ -4,7 +4,7 @@ Laravel Route Restrictor is a middleware package designed to restrict a entire s
 
 ## Setup
 
-1. Run `composer require divineomega/laravel-route-restrictor`.
+1. Run `composer require jord-jd/laravel-route-restrictor`.
 2. Add `DivineOmega\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider::class` to the `$providers` array in your `config/app.php` file.
 3. Run `php artisan vendor:publish --provider="DivineOmega\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider"`.
 4. Add `\DivineOmega\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$middleware` array in your `app/Http/Kernel.php` file.
