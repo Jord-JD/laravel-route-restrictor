@@ -1,15 +1,17 @@
 # 🚫 Laravel Route Restrictor
 
-Laravel Route Restrictor is a middleware package designed to restrict a entire site or specific routes using HTTP basic authentication. It is compatible with Laravel 5.1 and above.
+Laravel Route Restrictor is middleware designed to restrict an entire site or specific routes using HTTP Basic Authentication. It is compatible with Laravel 5.1 through 13.
 
 ## Setup
 
 1. Run `composer require jord-jd/laravel-route-restrictor`.
-2. Add `JordJD\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider::class` to the `$providers` array in your `config/app.php` file.
+2. On Laravel 5.4 and earlier, add `JordJD\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider::class` to the `$providers` array in your `config/app.php` file. Newer Laravel versions discover it automatically.
 3. Run `php artisan vendor:publish --provider="JordJD\LaravelRouteRestrictor\Providers\LaravelRouteRestrictorServiceProvider"`.
 4. Add `\JordJD\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$middleware` array in your `app/Http/Kernel.php` file.
 5. Add `'routeRestrictor' => \JordJD\LaravelRouteRestrictor\Http\Middleware\BasicAuthentication::class` to the `$routeMiddleware` array in your `app/Http/Kernel.php` file.
-6. Add `RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]` immediately below `RewriteEngine On` in your `public/.htaccess` file. This is required for web servers that are configured to use CGI as their PHP handler.
+6. If a CGI/FastCGI server does not forward the `Authorization` header, configure the server to forward it. For Apache, add `RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]` immediately below `RewriteEngine On` in `public/.htaccess`.
+
+The middleware reads credentials from the request rather than PHP globals, so it also works safely with long-running application servers and test clients.
 
 ## Global restriction
 
